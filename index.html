@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>前端-胡爱华</title>
+<link rel="stylesheet" href="styl/iconfont.css"/>
+<style type="text/css">
+			*{
+		padding: 0;
+		margin: 0;
+	}
+	#box{
+		width: 100%;
+		height: 700px;
+		position: relative;
+		overflow: hidden;
+		-webkit-animation: run1 8s;
+				animation: run1 8s;
+	}
+	
+	@keyframes run1{
+				from{
+			opacity: 0;
+		}
+				to{
+			opacity: 1;
+		}
+			}
+	@-webkit-keyframes run1 {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	#box img.bj{
+		width: 100%;
+		height: 100%;
+	}
+	#box img.sc1{
+		width: 15%;
+		position: absolute;
+		top: 60%;
+		left: 85%;
+		-webkit-animation: run2 78s linear infinite 6s;
+				animation: run2 78s linear infinite 6s;
+	}
+	@keyframes run2{
+				from{
+			left: 85%;
+		}
+				to{
+			left: 25%
+		}
+			}
+	@webkit-keyframes run2 {
+		from {
+			left: 85%;
+		}
+		to {
+			left: 25%;
+		}
+	}
+	#box img.sc2{
+		width: 12%;
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		-webkit-animation: run3 20s linear infinite 4s;
+				animation: run3 20s linear infinite 4s;
+	}
+	@keyframes run3{
+				0%{
+			width: 12%;
+		}
+				50%{
+			width: 15%;
+		}
+		100%{
+			12%
+		}
+			}
+	#box .djx{
+		position: absolute;
+		top: 100%;
+		left: 36px;
+		animation: run4 20s linear 1 2s;
+		animation-fill-mode: forwards;
+	}
+	@keyframes run4{
+		0% {
+			top: 100%;
+		}
+		100% {
+			top: 10%;
+		}
+			}
+	.arrow_box {
+		height: 150px;
+		line-height: 150px;
+		text-align: center;
+		position: relative;
+	}
+	.arrow1 {
+		color: blue;
+		font-size: 100px;
+	}
+	.arrow2 {
+		font-size: 66px;
+		font-style: normal;
+		position: absolute;
+		left: 46.4%;
+		opacity: 0;
+		color: orange;
+		animation: shoot 3s linear infinite 3s;
+		animation-fill-mode: backwards;
+	}
+	@keyframes shoot {
+		1% {
+			left: 46.4%;
+			opacity: 1;
+		}
+		50% {
+			left: 100%;
+			opacity: 1;
+		}
+		51% {
+			left: 0;
+			opacity: 0;
+		}
+		52% {
+			opacity: 1;
+		}
+		98% {
+			opacity: 0;
+		}
+		100% {
+			left: 46.4%;
+			opacity: 0;
+		}
+	}
+	a {
+		text-decoration: none;
+	}
+	.arrow1, .arrow2 {
+		display: inline-block;
+	}
+	h2, h3 {
+		padding: 0;
+		margin: 0;
+	}
+	section {
+		text-align: center;
+		margin-top: -30px;
+	}
+</style>
+</head>
+<body>
+<div id="box">
+	<img src="image/bac.png" class="bj">
+	<img src="image/1s.png" class="sc1">
+	<img src="image/2s.png" class="sc2">
+	<img src="image/djx.png" class="djx">
+</div>
+<div class="iconfont arrow_box">
+	<a class="arrow1" href="">&#xe673;<i class="arrow2">&#xe673;</i></a>
+</div>
+<section>
+	<h2>CLICK</h2>
+	<h3>点击图标进入下一页</h3>
+</section>
+<audio src="image/djx.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>
+
