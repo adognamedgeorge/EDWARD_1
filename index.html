@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>前端-胡爱华</title>
 <link rel="stylesheet" href="styl/iconfont.css"/>
+<link rel="stylesheet" href="styl/nav.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <style type="text/css">
 			*{
 		padding: 0;
@@ -103,8 +105,11 @@
 		position: relative;
 	}
 	.arrow1 {
-		color: blue;
+		color: red;
 		font-size: 100px;
+	}
+	.arrow1:hover {
+		color: blue;
 	}
 	.arrow2 {
 		font-size: 66px;
@@ -146,17 +151,35 @@
 	.arrow1, .arrow2 {
 		display: inline-block;
 	}
+	section {
+		text-align: center;
+	}
 	h2, h3 {
 		padding: 0;
 		margin: 0;
 	}
-	section {
-		text-align: center;
-		margin-top: -30px;
+	ul, li {
+		margin: 0;
+		padding: 0;
 	}
 </style>
 </head>
 <body>
+<!--导航start-->
+<div id="nav">
+	<h2 style="float: left; line-height: 40px; margin-left: 50px; color: #dafffb;">作品</h2>
+	<ul class="nav_ul">
+		<li class="vue_1"><a href="javascript:;" target="_blank">Angular_Ionic</a></li>
+		<!--<li class="vue_2"><a href="javascript:;" target="_blank">React</a></li>-->
+		<li class="vue_3"><a href="javascript:;" target="_blank">JQuery</a></li>
+		<li class="h5_2"><a href="https://adognamedgeorge.github.io/EDWARD_6/join.html" target="_blank">H5_邀请页</a></li>
+		<li class="h5_1"><a href="https://adognamedgeorge.github.io/EDWARD_5/yuebing.html" target="_blank">H5_活动页</a></li>
+		<li class="vue_3"><a href="https://adognamedgeorge.github.io/EDWARD_4/dist/#/search" target="_blank">Vue_搜索页</a></li>
+		<li class="vue_2"><a href="https://adognamedgeorge.github.io/EDWARD_4/dist/#/detail" target="_blank">Vue_详情页</a></li>
+		<li class="vue_1"><a href="https://adognamedgeorge.github.io/EDWARD_4/dist/#/" target="_blank">Vue_首页</a></li>
+	</ul>
+</div>
+<!--导航end-->
 <div id="box">
 	<img src="image/bac.png" class="bj">
 	<img src="image/1s.png" class="sc1">
@@ -172,5 +195,36 @@
 </section>
 <audio src="image/djx.mp3" autoplay="autoplay" loop="loop"></audio>
 </body>
+<script>
+    $(function(){
+
+        $('#nav ul li a').hover(function(){
+            $(this).stop().animate({height:"208px"},600);
+        },function(){
+            $(this).stop().animate({height:"40px"},600);
+        });
+
+        //Work
+        $('#nav ul li.work a').hover(function(){
+            $(this).stop().animate({height:"163px"},600);
+        },600);
+
+        //Art
+        $('#nav ul li.art a').hover(function(){
+            $(this).stop().animate({height:"189px"},600);
+        },600);
+
+        //About
+        $('#nav ul li.about a').hover(function(){
+            $(this).stop().animate({height:"126px"},600);
+        },600);
+
+        //Connect
+        $('#nav ul li.connect a').hover(function(){
+            $(this).stop().animate({height:"139px"},600);
+        },600);
+
+    });
+</script>
 </html>
 
